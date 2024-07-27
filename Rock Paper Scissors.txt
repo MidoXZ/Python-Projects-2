@@ -1,0 +1,57 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+import random
+
+c1= int(input('What do you choose? type 0 for rock, 1 for paper, or 2 for scissors. \n'))
+
+list= [rock, paper, scissors]
+
+print(list[c1])
+
+print('Computer chose: ')
+
+c2= random.randint(0,2)
+print(list[c2])
+
+if c1==c2:
+  print("it's a draw")
+elif c1 == 0 and c2==1:
+  print('you lose')
+elif c1== 0 and c2==2:
+  print('you win')
+elif c1==1 and c2==0:
+  print('you win')
+elif c1==1 and c2==2:
+  print('you lose')
+elif c1==2 and c2==0:
+  print('you lose')
+elif c1==2 and c2==1:
+  print('you win')
+else:
+  print('try again')

@@ -1,0 +1,31 @@
+from replit import clear
+#HINT: You can call clear() to clear the output in the console.
+import art
+print(art.logo)
+print('Welcome to the secret auction program. ')
+
+bids={}
+go= 'yes'
+while go == 'yes':
+  key= input('What is your name?: ')
+  value= int(input('What is your bid?: '))
+  go= input("Are there any other bidders? type 'yes' or 'no'. ")
+  bids[key]= value
+  clear()
+
+
+l=[]
+
+for i in bids:
+  l.append(i)
+h= bids[l[0]]
+for i in bids: 
+  if h < bids[i]:
+    h= bids[i]
+for i in bids:
+  if bids[i]== h:
+    winner= i
+
+
+
+print(f"The winner is {winner} with a bid of ${h}. ")
